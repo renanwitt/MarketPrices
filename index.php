@@ -4,7 +4,7 @@
 	<head>
 		<title>Market Prices | Brazil</title>
 		<meta charset="UTF-8" />
-		<meta http-equiv="refresh" content="4; url=home.php">
+		<meta http-equiv="refresh" content="6; url=home.php">
 		<link rel="icon" href="img/icon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="css/estilos.css"/>
 		<link rel="stylesheet" href="css/progress-bar.css"/>
