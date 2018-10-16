@@ -4,7 +4,14 @@ body{
 }
 
 .logo{
-	margin: 0px auto;
+	margin: 0 auto;
 	width:500px;
 	height:200px;
+}
+
+.topo{
+	margin: 0 auto;
+	width: 1000px;
+	height: 70px;
+	background-color: #000;
 }
