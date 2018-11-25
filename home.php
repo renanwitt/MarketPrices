@@ -1,3 +1,5 @@
+<? php include("conexao.php"); ?>
+
 <html>
 	<head>
 		<title>Market Prices | Brazil</title>
@@ -13,7 +15,7 @@
 			</div>
 			<!-- Fim do logo do menu -->
 			<br><div class="login">
-					<form class="botao-login" method="get" action="cadastro.php"><button type="submit">LOGIN</button></form>
+					<form class="botao-login" method="get" action="login.php"><button type="submit">LOGIN</button></form>
 				</div>
 		</div>
 		<!-- Fim do topo -->

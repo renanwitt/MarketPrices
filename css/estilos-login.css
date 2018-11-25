@@ -1,0 +1,24 @@
+body{
+	margin: 0 auto;
+	background: #e5e5e5;
+}
+
+.logo-login{
+	margin: 0 auto;
+	text-align: center;
+}
+
+.formulario-login{
+	background: #fff;
+	margin: 0 auto;
+	width: 450px;
+	min-height: 200px;
+	text-align: center;
+	
+}
+
+.formulario-login input{
+	width: 80%;
+	padding: 10px;
+	margin-top: 7px;
+}
