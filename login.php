@@ -1,20 +1,18 @@
 <?php 
 	if(isset($_POST['botao'])){
 		
-		$db = mysqli_connect("localhost", "root", "", "cliente");	
-		
 		$user = $_POST['email'];
 		$senha = $_POST['senha'];
 		
-		$consulta_usuarios = "SELECT * FROM usuario WHERE email=='$user' && senha=='$senha'";
-		mysqli_query($db,$consulta_usuarios);
-		
-		if(mysqli_num_rows($consulta_usuarios)<=0){
-			//echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='login.php';</script>";
-		}else{
-			setcookie("login",$user);
-			header("Location:dashboard.php");
+		$conexao = mysqli_connect("localhost", "root", "","cliente");
+		if(!$conexao){
+			die("ERRO A");
 		}
+		
+		$consulta = mysqli_query("SELECT * FROM usuario WHERE email=='$user' AND senha=='$senha'",$conexao);
+		$linhas = mysqli_num_rows($consulta);
+		
+		echo "$linhas";
 		
 	}
 ?>
@@ -35,9 +33,9 @@
 		<div class="formulario-login">
 			<form action="" method="post">
 				<br><br>
-				<input type="email" name="email" placeholder="E-mail"/><br>
-				<input type="password" name="senha" placeholder="Senha"/><br>
-				<input type="submit" name="botao" value="Entrar"/><br><br><br>
+				<input type="email" name="email" id="email" placeholder="E-mail"/><br>
+				<input type="password" name="senha" id="senha" placeholder="Senha"/><br>
+				<input type="submit" name="botao" id="botao" value="Entrar"/><br><br><br>
 				<a href="#">Esqueci minha senha</a>&ensp; | &ensp;
 				<a href="cadastro.php">Não sou cadastrado</a><br><br>
 			</form>
