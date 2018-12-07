@@ -1,0 +1,32 @@
+.tituloCategoria{
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.tituloCategoria span{
+	line-height: 30px;
+	margin-bottom: 0px;
+	font-family: Arial;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.campos{
+	margin-top: 15px;
+	margin-left: 50px;
+	height: 35px;
+	width: 300px;
+}
+
+.btnInserir{
+	float: right;
+	margin-right: 50px;
+	width: 100px;
+	height: 35px;
+	background-color: green;
+	border: 1px solid;
+	border-radius: 5px;
+	
+	font-size: 14px;
+	color: #fff;
+}

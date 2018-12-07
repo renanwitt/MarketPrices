@@ -19,8 +19,18 @@
 				</div>
 		</div>
 		<!-- Fim do topo -->
-		<div class="conteudo">
-			Conteúdo
+		<div class="buscador">
+				<form name="busca" action="" method="post">
+					<input type="text" name="campoBuscador" class="campoBusca" placeholder="O que você procura?"/>
+				</form>
 		</div>
+		<div class="tituloCategoria">
+			<span>Inserir anúncio</span>
+		</div>
+		<!-- Início do conteúdo -->
+		<div class="conteudo">
+			<?php include("resultado.php"); ?>
+		</div>
+		<!-- Fim do conteúdo -->
 	</body>
 </html>
