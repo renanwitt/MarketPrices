@@ -13,23 +13,18 @@
 			
 			if ($numRegistros != 0) {
 				while ($produto = mysqli_fetch_object($resultado)) {
-				echo $produto->titulo . " (R$ ".$produto->preco.") <br />";
-				echo "<img src='images/".$produto->imagem."' width='120' height='120'>";
+								
+					echo "<div class='boxAnuncio'>
+							<div class='imagemAnuncio'><img src='images/".$produto->imagem."' width='120' height='120'></div>
+							<div class='tituloAnuncio'><br>".$produto->titulo."</div>
+							<div class='precoAnuncio'><br>"."R$ ".$produto->preco."</div>
+						</div>";
 				}
 			} else {
 				echo "O produto '".$termoBuscado."' não foi encontrado";
 			}
-			
-			/*while($row = mysql_fetch_assoc($sql)){
-					
-					echo "<div class='boxResultado'>
-								<div class='imagem'>".$row['imagem']."</div>
-								<div class='titulo'>".$row['titulo']."</div>
-								<div class='preco'>".$row['preco']."</div>
-						</div>";
-					
-			}*/
 		}
 ?>
 
+<link rel='stylesheet' href='css/estilos-resultado.css';
 

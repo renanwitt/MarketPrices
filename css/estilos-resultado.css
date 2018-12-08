@@ -1,0 +1,37 @@
+.boxAnuncio{
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 900px;
+	height: 130px;
+	border-bottom: 2px solid #999;
+}
+
+
+.boxAnuncio > div {
+    width:32%;
+    height:100%;
+    position:relative;
+    float:left;
+}
+
+
+.imagemAnuncio{
+	text-align: left;
+}
+
+.tituloAnuncio{
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #000;
+	line-height: 45px;
+}
+
+.precoAnuncio{
+	text-align: right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 28px;
+	font-weight: bold;
+	color: #000;
+	line-height: 45px;
+}

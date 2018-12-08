@@ -12,6 +12,8 @@
 	
 		if(empty($titulo) || empty($preco)){
 			echo '<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript"> alert ("Opa! Parece que você esqueceu de preencher algum campo.")</SCRIPT>';
+			header('Location: inserir.php');
+			return;
 		}
 		
      
@@ -60,7 +62,7 @@
 			<form action="" method="post" enctype="multipart/form-data">
 				<input type="text" name="titulo" class="campos" placeholder="Título"/><br>
 				<input type="file" name="image" class="campos"/><br>
-				<input type="number" name="preco" class="campos" placeholder="Preço"/><br><br>
+				<input type="number" step="0.01" name="preco" class="campos" placeholder="Preço"/><br><br>
 				<input type="submit" name="btnInserir" class="btnInserir" value="Inserir"/>
 			</form>
 		</div>
