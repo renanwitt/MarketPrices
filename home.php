@@ -11,7 +11,7 @@
 		<div class="topo">
 			<!-- Início do logo do menu -->
 			<div class="logo-menu">
-				<br><img src="./img/logo-menu.png"/>
+				<br><a href="home.php"><img src="./img/logo-menu.png"/></a>
 			</div>
 			<!-- Fim do logo do menu -->
 			<br><div class="login">
@@ -25,7 +25,7 @@
 				</form>
 		</div>
 		<div class="tituloCategoria">
-			<span>Inserir anúncio</span>
+			<span>Exibindo: Produtos mais pesquisados</span>
 		</div>
 		<!-- Início do conteúdo -->
 		<div class="conteudo">

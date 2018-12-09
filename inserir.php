@@ -1,4 +1,11 @@
 <?php 
+	session_start();
+		if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true)){
+			unset($_SESSION['usuario']);
+			unset($_SESSION['senha']);
+			header('location:login.php');
+  }
+	$usuarioAtual = $_SESSION['id'];
 
 	$msg = "";
 	if(isset($_POST['btnInserir'])){
@@ -17,7 +24,7 @@
 		}
 		
      
-    $sql = "INSERT INTO anuncio (titulo, imagem, preco) VALUES ('$titulo', '$imagem', '$preco')";
+    $sql = "INSERT INTO anuncio (titulo, imagem, preco, id_user) VALUES ('$titulo', '$imagem', '$preco', $usuarioAtual)";
     mysqli_query($db, $sql);
      
     if(move_uploaded_file($_FILES['image']['tmp_name'], $target)){
@@ -44,11 +51,11 @@
 		<div class="topo">
 			<!-- Início do logo do menu -->
 			<div class="logo-menu">
-				<br><img src="./img/logo-menu.png"/>
+				<br><a href="home.php"><img src="./img/logo-menu.png"/></a>
 			</div>
 			<!-- Fim do logo do menu -->
 			<br><div class="login">
-					<form class="botao-login" method="get" action="login.php"><button type="submit">LOGIN</button></form>
+					<form class="botao-login" method="get" action="login.php"><button type="submit"><?php echo $usuarioAtual ?></button></form>
 				</div>
 		</div>
 		<!-- Fim do topo -->

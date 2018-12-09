@@ -21,7 +21,8 @@
 						</div>";
 				}
 			} else {
-				echo "O produto '".$termoBuscado."' não foi encontrado";
+				echo "<br><br><br><br><br><br>
+					<div class='notFound'><span>O produto '".$termoBuscado."' não foi encontrado. Efetue uma nova busca.</span></div>";
 			}
 		}
 ?>

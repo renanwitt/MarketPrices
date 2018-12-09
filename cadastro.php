@@ -29,7 +29,7 @@ if(isset($_POST['botao'])){
 	<body>
 		<!-- Início do logo-cadastro -->
 		<div class="logo-cadastro">
-			<img src="img/logo-grande.png" width="400" />
+			<a href="home.php"><img src="img/logo-grande.png" width="300" /></a>
 		</div>
 		<!-- Fim do logo-cadastro -->
 		<div class="formulario-cadastro">
