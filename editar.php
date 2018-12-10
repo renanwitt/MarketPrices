@@ -25,13 +25,13 @@
 			</div>
 			<!-- Fim do logo do menu -->
 			<br><div class="login">
-					<form class="botao-login" method="get" action="login.php"><button type="submit"><?php echo $usuarioAtual ?></button></form>
+					<form class="botao-login" method="get" action="sair.php"><button type="submit"><?php echo $usuarioAtual ?></button></form>
 				</div>
 		</div>
 		<!-- Fim do topo -->
 		<br>
 		<div class="tituloCategoria">
-			<span>Editar anúncio</span>
+			<span>Editar produto</span>
 		</div>
 		<!-- Início do conteúdo -->
 		<div class="conteudo">

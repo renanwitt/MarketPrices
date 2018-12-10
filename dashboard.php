@@ -14,6 +14,7 @@
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="./css/estilos-home.css"/>
 		<link rel="stylesheet" href="./css/estilos-inserir.css"/>
+		<link rel="stylesheet" href="./css/estilos-dashboard.css"/>
 	</head>
 	<body>
 		<!-- Início do topo -->
@@ -24,7 +25,7 @@
 			</div>
 			<!-- Fim do logo do menu -->
 			<br><div class="login">
-					<form class="botao-login" method="get" action="#"><button type="submit"><?php echo "Olá, ".$usuarioAtual."" ?></button></form>
+					<form class="botao-login" method="get" action="sair.php"><button type="submit"><?php echo "Olá, ".$usuarioAtual."" ?></button></form>
 				</div>
 		</div>
 		<!-- Fim do topo -->
@@ -34,7 +35,12 @@
 		</div>
 		<!-- Início do conteúdo -->
 		<div class="conteudo">
-			DADOS
+			<form name="dashboard" action="action-dash.php" class="dashboard" method="post">
+				<input type="submit" name="btnListar" value="Listar meus produtos"/><br>
+				<input type="submit" name="btnAlterar" value="Editar / Excluir um produto"/><br>
+				<input type="submit" name="btnMeusDados" value="Minha Conta"/><br><br>
+				<span>Para sair, clique em seu nome de usuário no topo</span>
+			</form>
 		</div>
 		<!-- Fim do conteúdo -->
 	</body>

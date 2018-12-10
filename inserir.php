@@ -55,7 +55,7 @@
 			</div>
 			<!-- Fim do logo do menu -->
 			<br><div class="login">
-					<form class="botao-login" method="get" action="login.php"><button type="submit"><?php echo $usuarioAtual ?></button></form>
+					<form class="botao-login" method="get" action="sair.php"><button type="submit"><?php echo $usuarioAtual ?></button></form>
 				</div>
 		</div>
 		<!-- Fim do topo -->

@@ -1,5 +1,4 @@
 <? php include("conexao.php"); ?>
-
 <html>
 	<head>
 		<title>Market Prices | Brazil</title>
