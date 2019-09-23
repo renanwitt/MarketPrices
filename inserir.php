@@ -11,10 +11,10 @@
 	if(isset($_POST['btnInserir'])){
     $target = "images/".basename($_FILES['image']['name']);
      
-    $db = mysqli_connect("localhost", "root", "", "cliente");
+    $db = mysqli_connect("localhost", "root", "", "market");
      
     $imagem = $_FILES['image']['name'];
-    $titulo = $_POST['titulo'];
+    $descricao = $_POST['titulo'];
     $preco = $_POST['preco'];
 	
 		if(empty($titulo) || empty($preco)){
@@ -24,7 +24,7 @@
 		}
 		
      
-    $sql = "INSERT INTO anuncio (titulo, imagem, preco, id_user) VALUES ('$titulo', '$imagem', '$preco', $usuarioAtual)";
+    $sql = "INSERT INTO produto (descricao, preco, imagem) VALUES ('$descricao', '$preco', '$imagem')";
     mysqli_query($db, $sql);
      
     if(move_uploaded_file($_FILES['image']['tmp_name'], $target)){

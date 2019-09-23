@@ -3,22 +3,22 @@
 		
 		session_start();
 		
-		$user = $_POST['email'];
+		$login = $_POST['login'];
 		$senha = $_POST['senha'];
 		
-		$db = mysqli_connect("localhost", "root", "","cliente");
+		$db = mysqli_connect("localhost", "root", "","market");
 
 		
-		$consulta = "SELECT * FROM usuario WHERE email='$user' AND senha='$senha'";
+		$consulta = "SELECT * FROM usuarioJuridico WHERE login='$login' AND senha='$senha'";
 		$resultado = mysqli_query($db,$consulta);
 		
 		$linhas = mysqli_num_rows($resultado);
 		
 		if($linhas != 0){
-			while($login = mysqli_fetch_object($resultado)){
-				$_SESSION['id'] = $login->id;
-				$_SESSION['nome'] = $login->fantasia;
-				$_SESSION['usuario'] = $user;
+			while($usuario = mysqli_fetch_object($resultado)){
+				$_SESSION['id'] = $usuario->id_usuarioJuridico;
+				$_SESSION['nome'] = $usuario->nome;
+				$_SESSION['usuario'] = $login;
 				$_SESSION['senha'] = $senha;
 				header('Location: dashboard.php');
 			}
@@ -44,7 +44,7 @@
 		<div class="formulario-login">
 			<form action="" method="post">
 				<br><br>
-				<input type="email" name="email" id="email" placeholder="E-mail"/><br>
+				<input type="text" name="login" id="login" placeholder="Login"/><br>
 				<input type="password" name="senha" id="senha" placeholder="Senha"/><br>
 				<input type="submit" name="botao" id="botao" value="Entrar"/><br><br><br>
 				<a href="recuperar-senha.php">Esqueci minha senha</a>&ensp; | &ensp;

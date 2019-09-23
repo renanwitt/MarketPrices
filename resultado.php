@@ -4,9 +4,9 @@
 		
 			$termoBuscado = $_POST['campoBuscador'];
 		
-			$db = mysqli_connect("localhost", "root", "", "cliente");
+			$db = mysqli_connect("localhost", "root", "", "market");
 			
-			$sql = "SELECT * FROM anuncio WHERE titulo LIKE '%".$termoBuscado."%'";
+			$sql = "SELECT * FROM produto WHERE descricao LIKE '%".$termoBuscado."%'";
 			$resultado = mysqli_query($db, $sql);
 			
 			$numRegistros = mysqli_num_rows($resultado);
@@ -16,7 +16,7 @@
 								
 					echo "<div class='boxAnuncio'>
 							<div class='imagemAnuncio'><img src='images/".$produto->imagem."' width='120' height='120'></div>
-							<div class='tituloAnuncio'><br>".$produto->titulo."</div>
+							<div class='tituloAnuncio'><br>".$produto->descricao."</div>
 							<div class='precoAnuncio'><br>"."R$ ".$produto->preco."</div>
 						</div>";
 				}

@@ -9,7 +9,7 @@
 		
 		$db = mysqli_connect("localhost", "root", "", "cliente");
 		
-		$consulta = "SELECT * FROM anuncio WHERE id_user='$idUsuario'";
+		$consulta = "SELECT * FROM produto WHERE id_user='$idUsuario'";
 		$resultado = mysqli_query($db, $consulta);
 		
 		$registrosEncontrados = mysqli_num_rows($resultado);

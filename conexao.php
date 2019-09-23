@@ -2,13 +2,14 @@
     $host = "localhost";
     $username = "root";
     $password = "";
-    $database = "cliente";
+    $database = "market";
     $conn = mysqli_connect($host, $username, $password, $database);
 	
 	if (!$conn) {
-      die("Connection failed: " . mysqli_connect_error());
+		echo "ERRO DE CONEXÃO.";
+      	die("Connection failed: " . mysqli_connect_error());
 	}else{
-			echo "Connected successfully";
+			echo "CONECTADO";
 
 	}
 	
